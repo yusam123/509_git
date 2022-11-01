@@ -11,6 +11,17 @@ board = [
     "....##############....",
 ]
 
+hon_board = [
+    "......................",
+    "################......",
+    "#..............#......",
+    "#..............#......",
+    "#..............#####..",
+    "#######............#..",
+    "....#............###..",
+    "....##############....",
+]
+
 
 def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> List[str]:
     """Returns board with old values replaced with new values
@@ -52,6 +63,11 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
 modified_board = flood_fill(input_board=board, old=".", new="~", x=5, y=12)
 
 for a in modified_board:
+    print(a)
+
+hon_modified_board = flood_fill(input_board=hon_board, old=".", new="~", x=5, y=12)
+
+for a in hon_modified_board:
     print(a)
 
 # Expected output:
